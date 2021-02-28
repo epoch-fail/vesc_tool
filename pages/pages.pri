@@ -16,6 +16,7 @@ FORMS += \
     $$PWD/pageappadc.ui \
     $$PWD/pageappuart.ui \
     $$PWD/pageappnunchuk.ui \
+    $$PWD/pageappskidaddle.ui \
     $$PWD/pageappnrf.ui \
     $$PWD/pageterminal.ui \
     $$PWD/pagefirmware.ui \
@@ -38,6 +39,7 @@ FORMS += \
 HEADERS += \
     $$PWD/pageappbalance.h \
     $$PWD/pageapppas.h \
+    $$PWD/pageappskidaddle.h \
     $$PWD/pagebms.h \
     $$PWD/pagecananalyzer.h \
     $$PWD/pageconnection.h \
@@ -53,6 +55,7 @@ HEADERS += \
     $$PWD/pageappadc.h \
     $$PWD/pageappuart.h \
     $$PWD/pageappnunchuk.h \
+    $$PWD/pageappskidaddle.h \
     $$PWD/pageappnrf.h \
     $$PWD/pageterminal.h \
     $$PWD/pagefirmware.h \
@@ -75,6 +78,7 @@ HEADERS += \
 SOURCES += \
     $$PWD/pageappbalance.cpp \
     $$PWD/pageapppas.cpp \
+    $$PWD/pageappskidaddle.cpp \
     $$PWD/pagebms.cpp \
     $$PWD/pagecananalyzer.cpp \
     $$PWD/pageconnection.cpp \
@@ -90,6 +94,7 @@ SOURCES += \
     $$PWD/pageappadc.cpp \
     $$PWD/pageappuart.cpp \
     $$PWD/pageappnunchuk.cpp \
+    $$PWD/pageappskidaddle.cpp \
     $$PWD/pageappnrf.cpp \
     $$PWD/pageterminal.cpp \
     $$PWD/pagefirmware.cpp \

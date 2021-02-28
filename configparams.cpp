@@ -875,10 +875,13 @@ void ConfigParams::serialize(VByteArray &vb)
 
 bool ConfigParams::deSerialize(VByteArray &vb)
 {
+    static uint32_t cnt = 0;
+    cnt++;
     auto signature = vb.vbPopFrontUint32();
+    auto expected = getSignature();
 
     if (signature != getSignature()) {
-        qWarning() << "Invalid signature";
+        qWarning() << "Invalid signature at uint32 number " << cnt << "expected" << expected << " and got " << signature;
         return false;
     }
 

@@ -262,7 +262,7 @@ p, li { white-space: pre-wrap; }
             <enumNames>ADC and UART</enumNames>
             <enumNames>Nunchuk (I2C, Nyko Kama)</enumNames>
             <enumNames>NRF</enumNames>
-            <enumNames>Custom User App</enumNames>
+            <enumNames>Skidaddle</enumNames>
             <enumNames>Balance</enumNames>
             <enumNames>PAS</enumNames>
             <enumNames>ADC and PAS</enumNames>
@@ -1526,6 +1526,85 @@ p, li { white-space: pre-wrap; }
             <suffix> s</suffix>
             <vTx>9</vTx>
         </app_chuk_conf.smart_rev_ramp_time>
+        <app_skidaddle_conf.skidaddle_mode>
+            <longName>Ski mode</longName>
+            <type>4</type>
+            <transmittable>1</transmittable>
+            <description>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Sans Serif'; ; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Ski mode under nunchuk control.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</description>
+            <cDefine>APPCONF_SKIDADDLE_SKI_MODE</cDefine>
+            <valInt>2</valInt>
+            <enumNames>Skateboard</enumNames>
+            <enumNames>Manual Alternating</enumNames>
+            <enumNames>Auto Alternating</enumNames>
+        </app_skidaddle_conf.skidaddle_mode>
+        <app_skidaddle_conf.cycle_time_ms>
+            <longName>Continuous mode cycle time in milliseconds</longName>
+            <type>2</type>
+            <transmittable>1</transmittable>
+            <description>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Sans Serif'; ; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Length of stride cycle in ms.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</description>
+            <cDefine>APPCONF_SKIDADDLE_CYCLE_TIME_MS</cDefine>
+            <editorScale>1</editorScale>
+            <editAsPercentage>0</editAsPercentage>
+            <maxInt>16384</maxInt>
+            <minInt>0</minInt>
+            <showDisplay>0</showDisplay>
+            <stepInt>10</stepInt>
+            <valInt>1000</valInt>
+            <suffix> ms</suffix>
+            <vTx>3</vTx>
+        </app_skidaddle_conf.cycle_time_ms>
+        <app_skidaddle_conf.cycle_peak_percent>
+            <longName>Cycle Peak Percentage</longName>
+            <type>1</type>
+            <transmittable>1</transmittable>
+            <description>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Roboto'; ; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Sans Serif';&quot;&gt;Percentage of boost on trailing foot at full throttle.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</description>
+            <cDefine>APPCONF_SKIDADDLE_CYCLE_PEAK_PERCENT</cDefine>
+            <editorDecimalsDouble>2</editorDecimalsDouble>
+            <editorScale>1</editorScale>
+            <editAsPercentage>1</editAsPercentage>
+            <maxDouble>100</maxDouble>
+            <minDouble>0</minDouble>
+            <showDisplay>0</showDisplay>
+            <stepDouble>0.1</stepDouble>
+            <valDouble>80</valDouble>
+            <vTxDoubleScale>1000</vTxDoubleScale>
+            <suffix> percent</suffix>
+            <vTx>9</vTx>
+        </app_skidaddle_conf.cycle_peak_percent>
+        <app_skidaddle_conf.cycle_trough_percent>
+            <longName>Cycle Trough Percentage</longName>
+            <type>1</type>
+            <transmittable>1</transmittable>
+            <description>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Roboto'; ; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Sans Serif';&quot;&gt;Percentage of boost on leading foot at full throttle .&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</description>
+            <cDefine>APPCONF_SKIDADDLE_CYCLE_TROUGH_PERCENT</cDefine>
+            <editorDecimalsDouble>2</editorDecimalsDouble>
+            <editorScale>1</editorScale>
+            <editAsPercentage>1</editAsPercentage>
+            <maxDouble>100</maxDouble>
+            <minDouble>0</minDouble>
+            <showDisplay>0</showDisplay>
+            <stepDouble>0.1</stepDouble>
+            <valDouble>20</valDouble>
+            <vTxDoubleScale>1000</vTxDoubleScale>
+            <suffix> percent</suffix>
+            <vTx>9</vTx>
+        </app_skidaddle_conf.cycle_trough_percent>
         <app_nrf_conf.speed>
             <longName>Speed</longName>
             <type>4</type>
@@ -3247,6 +3326,10 @@ p, li { white-space: pre-wrap; }
         <ser>app_chuk_conf.use_smart_rev</ser>
         <ser>app_chuk_conf.smart_rev_max_duty</ser>
         <ser>app_chuk_conf.smart_rev_ramp_time</ser>
+        <ser>app_skidaddle_conf.skidaddle_mode</ser>
+        <ser>app_skidaddle_conf.cycle_time_ms</ser>
+        <ser>app_skidaddle_conf.cycle_peak_percent</ser>
+        <ser>app_skidaddle_conf.cycle_trough_percent</ser>
         <ser>app_nrf_conf.speed</ser>
         <ser>app_nrf_conf.power</ser>
         <ser>app_nrf_conf.crc_type</ser>
@@ -3465,6 +3548,18 @@ p, li { white-space: pre-wrap; }
                     <param>app_chuk_conf.throttle_exp</param>
                     <param>app_chuk_conf.throttle_exp_brake</param>
                     <param>app_chuk_conf.throttle_exp_mode</param>
+                </subgroupParams>
+            </subgroup>
+        </group>
+        <group>
+            <groupName>Skidaddle</groupName>
+            <subgroup>
+                <subgroupName>General</subgroupName>
+                <subgroupParams>
+                    <param>app_skidaddle_conf.skidaddle_mode</param>
+                    <param>app_skidaddle_conf.cycle_time_ms</param>
+                    <param>app_skidaddle_conf.cycle_peak_percent</param>
+                    <param>app_skidaddle_conf.cycle_trough_percent</param>
                 </subgroupParams>
             </subgroup>
         </group>

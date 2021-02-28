@@ -206,6 +206,8 @@ MainWindow::MainWindow(QWidget *parent) :
                     (!(type == 3 || type == 4 || type == 5 || type == 8));
             ui->pageList->item(mPageNameIdList.value("app_vescremote"))->setHidden
                     (!(type == 0 || type == 3 || type == 6 || type == 7 || type == 8));
+            ui->pageList->item(mPageNameIdList.value("app_skidaddle"))->setHidden
+                    (!(type == 0 || type == 3 || type == 6 || type == 7 || type == 8)); // KBM: ??? what are the types. Use the same as nunchuk for now
             ui->pageList->item(mPageNameIdList.value("app_balance"))->setHidden
                     (!(type == 8 || type == 9));
             ui->pageList->item(mPageNameIdList.value("app_pas"))->setHidden
@@ -239,6 +241,7 @@ MainWindow::MainWindow(QWidget *parent) :
             ui->pageList->item(mPageNameIdList.value("app_adc"))->setHidden(false);
             ui->pageList->item(mPageNameIdList.value("app_uart"))->setHidden(false);
             ui->pageList->item(mPageNameIdList.value("app_vescremote"))->setHidden(false);
+            ui->pageList->item(mPageNameIdList.value("app_skidaddle"))->setHidden(false);
             ui->pageList->item(mPageNameIdList.value("app_nrf"))->setHidden(false);
             ui->pageList->item(mPageNameIdList.value("app_balance"))->setHidden(false);
             ui->pageList->item(mPageNameIdList.value("app_pas"))->setHidden(false);
@@ -266,6 +269,7 @@ MainWindow::MainWindow(QWidget *parent) :
             ui->pageList->item(mPageNameIdList.value("app_adc"))->setHidden(true);
             ui->pageList->item(mPageNameIdList.value("app_uart"))->setHidden(true);
             ui->pageList->item(mPageNameIdList.value("app_vescremote"))->setHidden(true);
+            ui->pageList->item(mPageNameIdList.value("app_skidaddle"))->setHidden(true);
             ui->pageList->item(mPageNameIdList.value("app_nrf"))->setHidden(true);
             ui->pageList->item(mPageNameIdList.value("app_balance"))->setHidden(true);
             ui->pageList->item(mPageNameIdList.value("app_pas"))->setHidden(true);
@@ -295,6 +299,7 @@ MainWindow::MainWindow(QWidget *parent) :
         mPageAppAdc->reloadParams();
         mPageAppUart->reloadParams();
         mPageAppNunchuk->reloadParams();
+        mPageAppSkidaddle->reloadParams();
         mPageAppNrf->reloadParams();
         mPageAppBalance->reloadParams();
         mPageAppPas->reloadParams();
@@ -1215,6 +1220,13 @@ void MainWindow::reloadPages()
                 "://res/icons/appconf.png", false, true);
     mPageNameIdList.insert("app_vescremote", ui->pageList->count() - 1);
 
+    mPageAppSkidaddle = new PageAppSkidaddle(this);
+    mPageAppSkidaddle->setVesc(mVesc);
+    ui->pageWidget->addWidget(mPageAppSkidaddle);
+    addPageItem(tr("Skidaddle"), "://res/icons/icons8-fantasy-96.png",
+                "://res/icons/appconf.png", false, true);
+    mPageNameIdList.insert("app_skidaddle", ui->pageList->count() - 1);
+
     mPageAppNrf = new PageAppNrf(this);
     mPageAppNrf->setVesc(mVesc);
     ui->pageWidget->addWidget(mPageAppNrf);
@@ -1343,6 +1355,7 @@ void MainWindow::reloadPages()
      * app_adc
      * app_uart
      * app_vescremote
+     * app_skidaddle
      * app_nrf
      * app_balance
      * app_imu

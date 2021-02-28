@@ -51,6 +51,7 @@
 #include "pages/pageappadc.h"
 #include "pages/pageappuart.h"
 #include "pages/pageappnunchuk.h"
+#include "pages/pageappskidaddle.h"
 #include "pages/pageappnrf.h"
 #include "pages/pageappbalance.h"
 #include "pages/pageapppas.h"
@@ -188,6 +189,7 @@ private:
     PageAppAdc *mPageAppAdc;
     PageAppUart *mPageAppUart;
     PageAppNunchuk *mPageAppNunchuk;
+    PageAppSkidaddle *mPageAppSkidaddle;
     PageAppNrf *mPageAppNrf;
     PageAppBalance *mPageAppBalance;
     PageAppPas *mPageAppPas;
